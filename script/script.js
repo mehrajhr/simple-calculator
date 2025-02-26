@@ -58,3 +58,8 @@ document.getElementById('equal').addEventListener('click', function(event){
     const displayText = document.getElementById("display-text");
     displayText.innerText += '=';
 })
+document.getElementById('delete').addEventListener('click', function(event){
+    const displayText = document.getElementById("display-text").innerText;
+    const text = displayText.substring(0, displayText.length-1);
+    document.getElementById('display-text').innerText = text;
+})
