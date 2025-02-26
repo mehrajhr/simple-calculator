@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <!-- daisy ui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-800">
+    <section class="max-w-md min-h-screen mx-auto bg-black">
+        <header id="display" class="h-52 bg-gray-200 pt-4 pl-4">
+            <h3 id="display-text" class="font-bold text-7xl text-end text-wrap"></h3>
+        </header>
+        <main class="p-4 mt-20">
+            <section>
+
+                <div class="my-1 grid grid-cols-4 w-full justify-center gap-4">
+                    <kbd id="zero" class="kbd font-bold text-3xl cursor-pointer">0</kbd>
+                    <kbd id="one" class="kbd font-bold text-3xl cursor-pointer">1</kbd>
+                    <kbd id="two" class="kbd font-bold text-3xl cursor-pointer">2</kbd>
+                    <kbd id="plus" class="kbd font-bold text-3xl cursor-pointer">+</kbd>
+                    <kbd id="three" class="kbd font-bold text-3xl cursor-pointer">3</kbd>
+                    <kbd id="four" class="kbd font-bold text-3xl cursor-pointer">4</kbd>
+                    <kbd id="five" class="kbd font-bold text-3xl cursor-pointer">5</kbd>
+                    <kbd id="minus" class="kbd font-bold text-3xl cursor-pointer">-</kbd>
+                    <kbd id="six" class="kbd font-bold text-3xl cursor-pointer">6</kbd>
+                    <kbd id="seven" class="kbd font-bold text-3xl cursor-pointer">7</kbd>
+                    <kbd id="eight" class="kbd font-bold text-3xl cursor-pointer">8</kbd>
+                    <kbd id="muktiple" class="kbd font-bold text-3xl cursor-pointer">*</kbd>
+                    <kbd id="nine" class="kbd font-bold text-3xl cursor-pointer">9</kbd>
+                    <kbd id="delete" class="kbd font-bold text-3xl cursor-pointer">DEL</kbd>
+                    <kbd id="equal" class="kbd font-bold text-3xl cursor-pointer">=</kbd>
+                    <kbd id="division" class="kbd font-bold text-3xl cursor-pointer">/</kbd>
+                  </div>
+                  
+            </section>
+        </main>
+    </section>
+
+    <script src="script/script.js"></script>
+</body>
+
+</html>
