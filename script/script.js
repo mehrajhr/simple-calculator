@@ -1,3 +1,4 @@
+let sum = 0;
 document.getElementById('zero').addEventListener('click', function(event){
     const displayText = document.getElementById("display-text");
     displayText.innerText += '0';
@@ -56,7 +57,15 @@ document.getElementById('division').addEventListener('click', function(event){
 })
 document.getElementById('equal').addEventListener('click', function(event){
     const displayText = document.getElementById("display-text");
-    displayText.innerText += '=';
+    let text = displayText.innerText;
+    text = text.substring(0,text.length);
+    const displayAnswer = document.getElementById('display-answer');
+    try {
+         let answer = eval(text);
+         displayAnswer.innerText = '=' + ' ' + answer; // Evaluates the expression
+    } catch {
+         displayAnswer.innerText = "Error"; // Handles invalid input
+    }
 })
 document.getElementById('delete').addEventListener('click', function(event){
     const displayText = document.getElementById("display-text").innerText;
