@@ -65,6 +65,7 @@ document.getElementById('division').addEventListener('click', function(event){
 })
 document.getElementById('answer').addEventListener('click', function(event){
     const displayText = document.getElementById("display-text");
+    displayText.innerText = '';
     displayText.innerText += sum;
 })
 document.getElementById('equal').addEventListener('click', function(event){
