@@ -39,6 +39,14 @@ document.getElementById('nine').addEventListener('click', function(event){
     const displayText = document.getElementById("display-text");
     displayText.innerText += '9';
 })
+document.getElementById('point').addEventListener('click', function(event){
+    const displayText = document.getElementById("display-text");
+    displayText.innerText += '.';
+})
+document.getElementById('percent').addEventListener('click', function(event){
+    const displayText = document.getElementById("display-text");
+    displayText.innerText += '%';
+})
 document.getElementById('plus').addEventListener('click', function(event){
     const displayText = document.getElementById("display-text");
     displayText.innerText += '+';
@@ -55,6 +63,10 @@ document.getElementById('division').addEventListener('click', function(event){
     const displayText = document.getElementById("display-text");
     displayText.innerText += '/';
 })
+document.getElementById('answer').addEventListener('click', function(event){
+    const displayText = document.getElementById("display-text");
+    displayText.innerText += sum;
+})
 document.getElementById('equal').addEventListener('click', function(event){
     const displayText = document.getElementById("display-text");
     let text = displayText.innerText;
@@ -62,6 +74,8 @@ document.getElementById('equal').addEventListener('click', function(event){
     const displayAnswer = document.getElementById('display-answer');
     try {
          let answer = eval(text);
+         sum = answer;
+         console.log(sum);
          displayAnswer.innerText = '=' + ' ' + answer; // Evaluates the expression
     } catch {
          displayAnswer.innerText = "Error"; // Handles invalid input
@@ -71,4 +85,10 @@ document.getElementById('delete').addEventListener('click', function(event){
     const displayText = document.getElementById("display-text").innerText;
     const text = displayText.substring(0, displayText.length-1);
     document.getElementById('display-text').innerText = text;
+})
+document.getElementById('ac').addEventListener('click', function(event){
+    const displayText = document.getElementById("display-text");
+    displayText.innerText = '';
+    const displayAnswer = document.getElementById('display-answer');
+    displayAnswer.innerText = '';
 })
